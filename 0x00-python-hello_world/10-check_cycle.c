@@ -22,4 +22,5 @@ int check_cycle(listint_t *list)
 		ptr1 = ptr1->next->next;
 		ptr2 = ptr2->next;
 	}
+	return (0);
 }
