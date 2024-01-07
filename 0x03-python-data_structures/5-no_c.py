@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 def no_c(my_string):
     length = len(my_string)
     i = 0
