@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 def no_c(my_string):
-    if my_string:
         length = len(my_string)
         i = 0
         while i < length:
