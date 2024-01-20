@@ -20,17 +20,20 @@ listint_t *insert_node(listint_t **head, int number)
     
     while (cursor != NULL)
     {   /*  insert in the middle  */
-        if ((cursor->n < number) && (cursor->next->n > number))
+        if ((cursor->n < number) && (cursor->next != NULL))
         {
-            prev_node = cursor;
-            next_node = cursor->next;
-            new_node = malloc(sizeof(listint_t));
-            if (new_node == NULL)
-                return (NULL);
-            new_node->n = number;
-            new_node->next = next_node;
-            prev_node->next = new_node;
-            break;
+            if (cursor->next->n > number)
+            {
+                prev_node = cursor;
+                next_node = cursor->next;
+                new_node = malloc(sizeof(listint_t));
+                if (new_node == NULL)
+                    return (NULL);
+                new_node->n = number;
+                new_node->next = next_node;
+                prev_node->next = new_node;
+                break;
+            }
         }
         else if (((*head)->n > number))
         {
