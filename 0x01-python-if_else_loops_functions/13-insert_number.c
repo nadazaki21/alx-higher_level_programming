@@ -60,7 +60,25 @@ listint_t *insert_node(listint_t **head, int number)
             
             break;
         }
-        
+        else if (cursor->n == number)
+        {
+            prev_node = cursor;
+            next_node = cursor->next;
+
+            new_node = malloc(sizeof(listint_t));
+            if (new_node == NULL)
+                return (NULL);
+
+            new_node->n = number;
+            prev_node->next = new_node;
+
+            if (cursor->next == NULL)
+                new_node->next = NULL;
+            else
+                new_node->next = next_node;
+            
+            break;   
+        }
         cursor = cursor->next;
     }
     return (new_node);
