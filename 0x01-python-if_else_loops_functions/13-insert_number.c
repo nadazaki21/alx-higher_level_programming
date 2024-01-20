@@ -32,15 +32,14 @@ listint_t *insert_node(listint_t **head, int number)
             prev_node->next = new_node;
             break;
         }
-        else if ((cursor->n > number) && ((cursor->next == NULL) || (cursor->next != NULL)))
+        else if (((*head)->n > number))
         {
-            /* if is it the whole list is biger than then number */
             new_node = malloc(sizeof(listint_t));
             if (new_node == NULL)
                 return (NULL);
 
             new_node->n = number;
-            new_node->next = cursor;
+            new_node->next = *head;
             break;
         }
         else if ((cursor->n < number) && (cursor->next == NULL))
