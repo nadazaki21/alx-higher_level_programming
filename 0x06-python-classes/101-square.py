@@ -61,6 +61,5 @@ class Square():
                     x = x + " "
                 for j in range((self.__size)):
                     x = x + "#"
-                x = x + "\n" if i !=self.size -1 else x+ ""      
+                x = x + "\n" if i != self.size - 1 else x + ""
         return x
-        
