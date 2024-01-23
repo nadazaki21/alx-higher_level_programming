@@ -18,7 +18,8 @@ class Square():
 
     @property
     def size(self):
-        return(self.__size)
+        return (self.__size)
+
     @size.setter
     def size(self, value):
         if (isinstance(value, int) != 1):
@@ -27,4 +28,3 @@ class Square():
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
-
