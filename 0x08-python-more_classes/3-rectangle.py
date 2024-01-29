@@ -46,10 +46,10 @@ class Rectangle:
         return 2 * (self.height + self.width)
     
     def __str__(self):
+        rec = ""
         if self.width is 0 or self.height is 0:
-            print()
+            return rec
         else:
-            rec = ""
             for h in range (self.height):
                 for w in range(self.width):
                    rec += "#"
