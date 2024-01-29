@@ -48,8 +48,11 @@ class Rectangle:
     def __str__(self):
         if self.width is 0 or self.height is 0:
             print()
-        else:  
+        else:
+            rec = ""
             for h in range (self.height):
                 for w in range(self.width):
-                    print("#",end="")
-                print("\n",end="")
+                   rec += "#"
+                rec += "\n"
+        
+        return rec
