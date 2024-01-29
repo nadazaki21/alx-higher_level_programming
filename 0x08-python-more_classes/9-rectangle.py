@@ -73,7 +73,10 @@ class Rectangle:
         else:
             for h in range(self.height):
                 for w in range(self.width):
-                    rec += str(self.print_symbol)
+                    try:
+                        total += str(self.print_symbol)
+                    except Exception:
+                        total += type(self).print_symbol
                 if h != self.height - 1:
                     rec += "\n"
         return rec
