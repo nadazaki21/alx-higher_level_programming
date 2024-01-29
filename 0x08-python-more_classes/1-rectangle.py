@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 """
 class Rectangle that defines a rectangle
+
+This module provides a simple Rectangle class with attribute width and height.
+Default values of both attributes are 0.
 """
 
 
-class Rectangle():
-    """
-    defines a rectangle
-    with a width and a height
-    """
+class Rectangle:
+    """ defines a rectangle with a width and a height """
 
     def __init__(self, width=0, height=0):
         self.__height = height
