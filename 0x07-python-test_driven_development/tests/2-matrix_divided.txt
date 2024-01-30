@@ -1,0 +1,64 @@
+Task 1
+function that divides matrix y a certain number
+
+
+Requirements:
+
+matrix must be a list of lists of integers or floats, otherwise raise a TypeError exception with the message matrix must be a matrix (list of lists) of integers/floats
+
+Each row of the matrix must be of the same size, otherwise raise a TypeError exception with the message Each row of the matrix must have the same size
+
+div must be a number (integer or float), otherwise raise a TypeError exception with the message div must be a number
+
+div can’t be equal to 0, otherwise raise a ZeroDivisionError exception with the message division by zero
+
+All elements of the matrix should be divided by div, rounded to 2 decimal places
+
+Returns a new matrix
+
+Tests:
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+# Testing div:
+
+
+>>> matrix = [[1, 2, 3],[4, 5, 6]]
+
+
+>>> matrix_divided(matrix, 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+  File <stdin>, line 1, in <module>
+  File <stdin>, line 20, in matrix_divided
+    raise ZeroDivisionError("division by zero")
+ZeroDivisionError: division by zero
+
+
+>>> matrix_divided(matrix, 3.5)
+[[0.29, 0.57, 0.86], [1.14, 1.43, 1.71]]
+
+>>> matrix_divided(matrix, -3)
+[[-0.33, -0.67, -1.0], [-1.33, -1.67, -2.0]]
+
+#Testing the matrix itself:
+
+>>> matrix = [[1, 2, 3],[4, 5]]
+
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 12, in matrix_divided
+    raise TypeError("Each row of the matrix must have the same size")
+TypeError: Each row of the matrix must have the same size
+
+>>> matrix = [[1, 2, 3],[4, 5, "6"]]
+
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 15, in matrix_divided
+    raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+TypeError: matrix must be a matrix (list of lists) of integers/floats

@@ -1,0 +1,56 @@
+Task 2
+function that prints My name is <first name> <last name>
+
+Requirements:
+first_name and last_name must be strings otherwise, raise a TypeError exception with the message first_name must be a string or last_name must be a string
+
+Tests:
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+>>> say_my_name("Walter", "White")
+My name is Walter White
+
+>>> say_my_name("Bob")
+My name is Bob 
+
+>>> say_my_name(920)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 10, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
+
+>>> say_my_name("Bob", 82)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 10, in say_my_name
+    raise TypeError("last_name must be a string")
+TypeError: last_name must be a string
+
+
+>>> say_my_name(k)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'k' is not defined
+
+>>> say_my_name("Nada", h)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'h' is not defined
+
+>>> say_my_name(555, "Nada")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 10, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
+
+
+>>> say_my_name(k, h)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'k' is not defined
