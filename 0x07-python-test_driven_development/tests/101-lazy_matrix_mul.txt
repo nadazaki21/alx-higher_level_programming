@@ -18,113 +18,115 @@ If m_a and m_b can’t be multiplied: raise a ValueError exception with the mess
 
 Test:
 
->>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+>>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
 
->>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
-[[7, 10], [15, 22]]
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+array([[ 7, 10],
+       [15, 22]])
 
->>> matrix_mul([[1, 2]], [[3, 4], [5, 6]])
-[[13, 16]]
+>>> lazy_matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+array([[13, 16]])
 
->>> matrix_mul([[3, 4], [5, 6]], [[1, 2]])
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "<stdin>", line 75, in matrix_mul
+>>> lazy_matrix_mul([[3, 4], [5, 6]], [[1, 2]])
+File "<stdin>", line 1, in <module>
+  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/101-lazy_matrix_mul.py", line 79, in lazy_matrix_mul
     raise ValueError("m_a and m_b can't be multiplied")
 ValueError: m_a and m_b can't be multiplied
 
 
->>> matrix_mul([[1, 2]], [[3, 4]])
+>>> lazy_matrix_mul([[1, 2]], [[3, 4]])
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/100-matrix_mul.py", line 75, in matrix_mul
+  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/101-lazy_matrix_mul.py", line 79, in lazy_matrix_mul
     raise ValueError("m_a and m_b can't be multiplied")
 ValueError: m_a and m_b can't be multiplied
 
->>> matrix_mul([[1, 2], [3, 4]], [[1, 2]])
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2]])
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/100-matrix_mul.py", line 75, in matrix_mul
+  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/101-lazy_matrix_mul.py", line 79, in lazy_matrix_mul
     raise ValueError("m_a and m_b can't be multiplied")
 ValueError: m_a and m_b can't be multiplied
 
->>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, a]])
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, a]])
 
->>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, "hi"]])
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, "hi"]])
 
->>> matrix_mul([[1, 2], [3, 4]], [[]])
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [[]])
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/100-matrix_mul.py", line 36, in matrix_mul
+  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/100-lazy_matrix_mul.py", line 36, in lazy_matrix_mul
     raise ValueError("m_b can't be empty")
 ValueError: m_b can't be empty
 
->>> matrix_mul([[]], [[1, 2], [3, 4]])
+>>> lazy_matrix_mul([[]], [[1, 2], [3, 4]])
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/100-matrix_mul.py", line 31, in matrix_mul
+  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/100-lazy_matrix_mul.py", line 31, in lazy_matrix_mul
     raise ValueError("m_a can't be empty")
 ValueError: m_a can't be empty
 
->>> matrix_mul([[1, 2], [3, 4]], [])
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [])
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/100-matrix_mul.py", line 34, in matrix_mul
+  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/100-lazy_matrix_mul.py", line 34, in lazy_matrix_mul
     raise ValueError("m_b can't be empty")
 ValueError: m_b can't be empty
 
->>> matrix_mul([], [[1, 2], [3, 4]])
+>>> lazy_matrix_mul([], [[1, 2], [3, 4]])
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/100-matrix_mul.py", line 29, in matrix_mul
+  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/100-lazy_matrix_mul.py", line 29, in lazy_matrix_mul
     raise ValueError("m_a can't be empty")
 ValueError: m_a can't be empty
 
->>> matrix_mul([[1, 2], [3]], [[1, 2], [3]])
+>>> lazy_matrix_mul([[1, 2], [3]], [[1, 2], [3]])
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/100-matrix_mul.py", line 58, in matrix_mul
+  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/100-lazy_matrix_mul.py", line 58, in lazy_matrix_mul
     raise TypeError("each row of m_a must be of the same size")
 TypeError: each row of m_a must be of the same size
 
->>> matrix_mul([[1, 2], [3]], [[1, 2], [3, 4]])
+>>> lazy_matrix_mul([[1, 2], [3]], [[1, 2], [3, 4]])
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/100-matrix_mul.py", line 58, in matrix_mul
+  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/100-lazy_matrix_mul.py", line 58, in lazy_matrix_mul
     raise TypeError("each row of m_a must be of the same size")
 TypeError: each row of m_a must be of the same size
 
->>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3]])
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3]])
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/100-matrix_mul.py", line 69, in matrix_mul
+  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/100-lazy_matrix_mul.py", line 69, in lazy_matrix_mul
     raise TypeError("each row of m_b must be of the same size")
 TypeError: each row of m_b must be of the same size
 
->>> matrix_mul([[1.4, 2.3], [3.5, 4.4]], [[1.1, 2.6], [3.4, 4.6]])
-[[9.36, 14.219999999999999], [18.810000000000002, 29.339999999999996]]
+>>> lazy_matrix_mul([[1.4, 2.3], [3.5, 4.4]], [[1.1, 2.6], [3.4, 4.6]])
+array([[ 9.36, 14.22],
+       [18.81, 29.34]])
 
->>> matrix_mul([[1.1, 2.2], [3, 4]], [[1.3, 2], [3, 4.5]])
-[[8.030000000000001, 12.100000000000001], [15.9, 24.0]]
+>>> lazy_matrix_mul([[1.1, 2.2], [3, 4]], [[1.3, 2], [3, 4.5]])
+array([[ 8.03, 12.1 ],
+       [15.9 , 24.  ]])
 
->>> matrix_mul([1, 2, 3, 4], [[1, 2], [3, 4]])
+>>> lazy_matrix_mul([1, 2, 3, 4], [[1, 2], [3, 4]])
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/100-matrix_mul.py", line 21, in matrix_mul
+  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/100-lazy_matrix_mul.py", line 21, in lazy_matrix_mul
     raise TypeError("m_a must be a list of lists")
 TypeError: m_a must be a list of lists
 
->>> matrix_mul([[1, 2], [3, 4]], [1, 2, 3, 4])
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [1, 2, 3, 4])
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/100-matrix_mul.py", line 25, in matrix_mul
+  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/100-lazy_matrix_mul.py", line 25, in lazy_matrix_mul
     raise TypeError("m_b must be a list of lists")
 TypeError: m_b must be a list of lists
 
->>> matrix_mul([1, 2, 3, 4], [1, 2, 3, 4])
+>>> lazy_matrix_mul([1, 2, 3, 4], [1, 2, 3, 4])
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/100-matrix_mul.py", line 21, in matrix_mul
+  File "/home/nada-zaki/alx/alx-python/alx-higher_level_programming/0x07-python-test_driven_development/100-lazy_matrix_mul.py", line 21, in lazy_matrix_mul
     raise TypeError("m_a must be a list of lists")
 TypeError: m_a must be a list of lists
 
