@@ -10,7 +10,7 @@ BaseGGeomtry and Rectangle class and sqaure class
 
 class Square(Rectangle):
     """ Sqaure class that inherits Rectangle """
-    
+
     def __init__(self, size):
         """ instilaizes saure size """
         super().integer_validator("size", size)
