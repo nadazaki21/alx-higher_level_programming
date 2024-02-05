@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 Rectangle = __import__('9-rectangle').Rectangle
-
 """
 ========================================
 BaseGGeomtry and Rectangle class and sqaure class
