@@ -45,7 +45,6 @@ class Square(Rectangle):
         """Method for initialized the attrubutes"""
         self.integer_validator("size", size)
         super().__init__(size, size)
-        self.__size = size
 
     def area(self):
         """rectangle area"""
