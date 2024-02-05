@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-""" rectangle class """
+""" 
+========================================
+BaseGGeomtry and Rectangle class 
+========================================
+"""
 
 
 class BaseGeometry():
@@ -15,6 +19,7 @@ class BaseGeometry():
 
 
 class Rectangle(BaseGeometry):
+    """ class that represnts a rectangle """
     def __init__(self, width, height):
         super().integer_validator("width", width)
         self.__width = width
