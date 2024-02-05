@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-""" 
+"""
 ========================================
-BaseGGeomtry and Rectangle class 
+BaseGGeomtry and Rectangle class
 ========================================
 """
 
