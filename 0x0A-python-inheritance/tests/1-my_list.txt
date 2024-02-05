@@ -138,3 +138,12 @@ TypeError: '<' not supported between instances of 'int' and 'str'
 
 >>> my_list10.print_sorted()
 ['8', 'a', 'b']
+
+
+
+>>> my_list11 = MyList()
+
+>>> my_list11.append(1.5)
+
+>>> my_list11.print_sorted()
+[1.5]
