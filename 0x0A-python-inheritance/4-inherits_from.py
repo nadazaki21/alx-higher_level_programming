@@ -6,7 +6,7 @@ from the specified class ; otherwise False. """
 
 def inherits_from(obj, a_class):
     """ check if object belons to inheritrance chain
-    it  returns true if it is a subclass, no the actual class"""
+    it  returns true if it is a subclass, no the actual class """
 
     obj_class = type(obj)
     if issubclass(obj_class, a_class):
