@@ -43,12 +43,11 @@ class Square(Rectangle):
 
     def __init__(self, size):
         """Method for initialized the attrubutes"""
-
-        super().__init__(size, size)
         self.integer_validator("size", size)
+        super().__init__(size, size)
         self.__size = size
 
     def area(self):
         """rectangle area"""
 
-        return self.__size ** 2
+        return super().area()
