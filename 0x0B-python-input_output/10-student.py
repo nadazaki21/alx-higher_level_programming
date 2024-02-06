@@ -26,4 +26,3 @@ class Student():
                 return vars(self)
         else:
             return vars(self)
-
