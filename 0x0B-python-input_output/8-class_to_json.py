@@ -2,7 +2,6 @@
 """ module 8 """
 
 
-
 def class_to_json(obj):
     """  function that returns the dictionary description
     with simple data structure (list, dictionary, string,
@@ -11,5 +10,5 @@ def class_to_json(obj):
     for attr_name, attr_value in obj.__dict__.items():
         if isinstance(attr_value, (list, dict, str, int, bool)):
             result[attr_name] = attr_value
-    #return vars(obj)
+    # return vars(obj)
     return result
