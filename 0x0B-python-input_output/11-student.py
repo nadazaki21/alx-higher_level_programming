@@ -32,4 +32,3 @@ class Student():
             for attr_name, att_value in self.__dict__.items():
                 if attr_name == json_name:
                     setattr(self, attr_name, json_value)
-
