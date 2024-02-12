@@ -5,7 +5,7 @@ import os
 
 
 class Base:
-    """base class to manage id attribute"""
+    """ base class to manage id attribute """
 
     __nb_objects = 0
 

@@ -4,7 +4,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """Class Rectangle that inherits base"""
+    """ Class Rectangle that inherits base """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """initiation function of class"""
@@ -81,9 +81,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """ computes area """
         return self.__width * self.__height
 
     def display(self):
+        """ draws shape """
         for y_spaces in range(self.y):
             print()
         for i in range(self.height):
@@ -94,9 +96,11 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """ on prinitng object or using str() function """
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
+        """ updating attributes of the object """
         if args != ():  # empty tuple
             for arg, (var_name, var_value) in zip(args, self.__dict__.items()):
                 setattr(self, var_name, arg)
@@ -105,6 +109,7 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """ displays attributes in the form of a dictionary """
         # method 1
         # return {
         #     'x': self.x,

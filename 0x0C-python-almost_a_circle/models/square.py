@@ -4,9 +4,10 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Class Sqaure the Inherts Rectangle class"""
+    """ Class Sqaure the Inherts Rectangle class """
 
     def __init__(self, size, x=0, y=0, id=None):
+        """ initialization function """
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
@@ -26,6 +27,7 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
+        """ update value of attributes of an objject """
         if args and args != ():
             attributes = ["id", "size", "x", "y"]
             counter = 0
@@ -50,6 +52,7 @@ class Square(Rectangle):
                     setattr(self, key, value)
 
     def to_dictionary(self):
+        """ displays attributes in the form of dictionary """
         # method 1
         # return {
         #     'x': self.x,
