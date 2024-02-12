@@ -42,10 +42,8 @@ class Base:
             for i in range(obj_num):
                 for att_name in att:
                     if att_name == "size":
-                        dic_to_append[att_name] = getattr(
-                            list_objs[counter], "width")
-                    dic_to_append[att_name] = getattr(
-                        list_objs[counter], att_name)
+                        dic_to_append[att_name] = getattr(list_objs[counter], "width")
+                    dic_to_append[att_name] = getattr(list_objs[counter], att_name)
                 instances_list.append(dic_to_append)
                 # print(instances_list)
                 counter += 1
@@ -60,7 +58,7 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         if json_string and json_string != "":
-            return json.load(json_string)
+            return json.loads(json_string)
         else:
             return []
 
@@ -72,7 +70,7 @@ class Base:
         if cls is Rectangle:
             new_obj = Rectangle(1, 2)
         elif cls is Square:
-            new_obj = Square(11)
+            new_obj = Square(1)
         new_obj.update(**dictionary)
         return new_obj
 
