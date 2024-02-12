@@ -96,9 +96,13 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
-        """ on prinitng object or using str() function """
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} -\
-                {self.width}/{self.height}"
+        """ on printing object or using str() function """
+        return (
+            f"[Rectangle] ({self.id}) "
+            f"{self.x}/{self.y} - "
+            f"{self.width}/{self.height}"
+        )
+
 
     def update(self, *args, **kwargs):
         """ updating attributes of the object """
@@ -110,7 +114,7 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
-        """ displays attributes in the form of a dictionary """
+        """ displays attributes in the form of a dictionary"""
         # method 1
         # return {
         #     'x': self.x,
