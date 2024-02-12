@@ -30,7 +30,7 @@ class Base:
         if list_objs and list_objs != []:
             class_name = type(
                 list_objs[0]
-            ).__name__  #  or list_objs[0].__class__.__name__
+            ).__name__  # or list_objs[0].__class__.__name__
 
             counter = 0
             obj_num = len(list_objs)
@@ -42,8 +42,10 @@ class Base:
             for i in range(obj_num):
                 for att_name in att:
                     if att_name == "size":
-                        dic_to_append[att_name] = getattr(list_objs[counter], "width")
-                    dic_to_append[att_name] = getattr(list_objs[counter], att_name)
+                        dic_to_append[att_name] = getattr(
+                            list_objs[counter], "width")
+                    dic_to_append[att_name] = getattr(
+                        list_objs[counter], att_name)
                 instances_list.append(dic_to_append)
                 # print(instances_list)
                 counter += 1
