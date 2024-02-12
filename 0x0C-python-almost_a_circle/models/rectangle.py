@@ -103,7 +103,6 @@ class Rectangle(Base):
             f"{self.width}/{self.height}"
         )
 
-
     def update(self, *args, **kwargs):
         """ updating attributes of the object """
         if args != ():  # empty tuple
