@@ -42,8 +42,10 @@ class Base:
             for i in range(obj_num):
                 for att_name in att:
                     if att_name == "size":
-                        dic_to_append[att_name] = getattr(list_objs[counter], "width")
-                    dic_to_append[att_name] = getattr(list_objs[counter], att_name)
+                        dic_to_append[att_name] = getattr(
+                            list_objs[counter], "width")
+                    dic_to_append[att_name] = getattr(
+                        list_objs[counter], att_name)
                 instances_list.append(dic_to_append)
                 # print(instances_list)
                 counter += 1
