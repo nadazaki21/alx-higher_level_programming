@@ -4,10 +4,16 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """ Class Rectangle that inherits base """
+    """Class Rectangle that inherits base"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """initiation function of class"""
+
+        if id is not None:
+            if not all(isinstance(var, int) for var in (id, width, height, x, y)):
+                raise TypeError
+            elif id < 0 or width < 0 or height < 0:
+                raise ValueError
 
         for var_name, var_value in {"width": width, "height": height}.items():
             if type(var_value) is not int:
@@ -81,11 +87,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """ computes area """
+        """computes area"""
         return self.__width * self.__height
 
     def display(self):
-        """ draws shape """
+        """draws shape"""
         for y_spaces in range(self.y):
             print()
         for i in range(self.height):
@@ -96,7 +102,7 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
-        """ on printing object or using str() function """
+        """on printing object or using str() function"""
         return (
             f"[Rectangle] ({self.id}) "
             f"{self.x}/{self.y} - "
@@ -104,16 +110,18 @@ class Rectangle(Base):
         )
 
     def update(self, *args, **kwargs):
-        """ updating attributes of the object """
+        """updating attributes of the object"""
+
         if args != ():  # empty tuple
             for arg, (var_name, var_value) in zip(args, self.__dict__.items()):
                 setattr(self, var_name, arg)
         else:
-            for key, value in kwargs.items():
-                setattr(self, key, value)
+            if kwargs and kwargs != {}:
+                for key, value in kwargs.items():
+                    setattr(self, key, value)
 
     def to_dictionary(self):
-        """ displays attributes in the form of a dictionary"""
+        """displays attributes in the form of a dictionary"""
         # method 1
         # return {
         #     'x': self.x,
