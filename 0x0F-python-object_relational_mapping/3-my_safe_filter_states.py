@@ -14,10 +14,8 @@ if __name__ == "__main__":
 
     cur.execute(
         "SELECT * \
-        FROM  states WHERE BINARY name='{}' \
-        ORDER BY id ASC".format(
-            sys.argv[4]
-        )
+        FROM  states WHERE BINARY name=%s \
+        ORDER BY id ASC",(sys.argv[4],)
     )
 
     result = cur.fetchall()
