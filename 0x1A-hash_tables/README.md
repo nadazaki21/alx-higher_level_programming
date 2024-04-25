@@ -1,3 +1,0 @@
-Holberton 
-
-C - Hash tables
