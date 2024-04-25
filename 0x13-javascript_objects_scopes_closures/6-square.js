@@ -9,7 +9,7 @@ module.exports = class Square extends oldSquare {
       }
     } else {
       for (let i = 0; i < this.height; i++) {
-        console.log('c'.repeat(this.width));
+        console.log('C'.repeat(this.width));
       }
     }
   }
