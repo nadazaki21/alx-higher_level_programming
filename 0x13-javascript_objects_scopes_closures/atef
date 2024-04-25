@@ -1,0 +1,18 @@
+#!/usr/bin/node
+// let a;
+// console.log(a);
+// let b = null;
+// console.log(b);
+// console.log(c);
+
+// var c = 3;
+// console.log(c);
+// say()
+// function say() {
+
+//     console.log("hello");
+// }
+// let obj = {a: 1, b:2};
+// console.log(obj.c);
+
+//console.log(+'1sag' + 1)
