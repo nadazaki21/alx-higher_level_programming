@@ -6,23 +6,26 @@ class Rectangle {
       this.height = h;
     }
   }
+
   print () {
     for (let i = 0; i < this.height; i++) {
-        console.log('X'.repeat(this.width));
+      console.log('X'.repeat(this.width));
     }
   }
+
   rotate () {
-    let tmp = this.width;
+    const tmp = this.width;
     this.width = this.height;
     this.height = tmp;
   }
+
   double () {
     this.width *= 2;
     this.height *= 2;
   }
 }
 
-module.exports = class Sqaure extends Rectangle {
+module.exports = class Square extends Rectangle {
   constructor (size) {
     super(size, size);
   }
