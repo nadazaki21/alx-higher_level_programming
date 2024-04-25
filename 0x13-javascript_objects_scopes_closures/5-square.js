@@ -6,13 +6,11 @@ class Rectangle {
       this.height = h;
     }
   }
-
   print () {
     for (let i = 0; i < this.height; i++) {
         console.log('X'.repeat(this.width));
     }
   }
-
   rotate () {
     let tmp = this.width;
     this.width = this.height;
@@ -27,6 +25,5 @@ class Rectangle {
 module.exports = class Sqaure extends Rectangle {
   constructor (size) {
     super(size, size);
-    this.size = size;
   }
 };
