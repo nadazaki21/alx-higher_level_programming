@@ -31,6 +31,6 @@ class Rectangle {
 module.exports = class Sqaure extends Rectangle {
   constructor (size) {
     super(size, size);
-    //this.size = size;
+    this.size = size;
   }
 };
