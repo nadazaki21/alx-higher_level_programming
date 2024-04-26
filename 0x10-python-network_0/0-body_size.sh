@@ -1,2 +1,2 @@
 #!/bin/bash
-curl  -w "%{size_download}"  "$1"
+curl  -ws "%{size_download}"  "$1"
