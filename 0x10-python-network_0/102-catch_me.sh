@@ -1,4 +1,3 @@
 #!/bin/bash
 # script that makes a request to 0.0.0.0:5000/catch_me that causes the server to respond with a message containing You got me!, in the body of the response.
-curl -sX POST 0.0.0.0:5000/catch_me -d "message=I am catching you!" | grep 'You got me!'
- 
+curl -s -o dump.txt --write-out "You got me!\n" 0.0.0.0:5000/catch_me
