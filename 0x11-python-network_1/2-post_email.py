@@ -7,16 +7,17 @@ import urllib.parse
 import sys
 
 
-url = sys.argv[1]
-email = sys.argv[2]
+if __name__ == "__main__":
+    url = sys.argv[1]
+    email = sys.argv[2]
 
-# Prepare POST data as a byte string with proper encoding
-data = {"email": email}
-data = urllib.parse.urlencode(data).encode("utf-8")
-# Create a POST request with the data
-req = urllib.request.Request(url, data)
+    # Prepare POST data as a byte string with proper encoding
+    data = {"email": email}
+    data = urllib.parse.urlencode(data).encode("utf-8")
+    # Create a POST request with the data
+    req = urllib.request.Request(url, data)
 
 
-with urllib.request.urlopen(req) as response:
-    the_page = response.read().decode("utf-8")
-    print(the_page)
+    with urllib.request.urlopen(req) as response:
+        the_page = response.read().decode("utf-8")
+        print(the_page)
