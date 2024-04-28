@@ -15,7 +15,7 @@ if __name__ == "__main__":
     try:
         r = requests.post("http://0.0.0.0:5000/search_user", params=payload)
         r.json()  # if json decoding fails , it raises an exception
-        print(r)
+        print(r.text)
             
     except requests.exceptions.JSONDecodeError:
         print("Not a valid JSON")
