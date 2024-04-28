@@ -18,7 +18,9 @@ if __name__ == "__main__":
         # print(r.status_code)
         # print(r.text)
         
-        if r.text == '{}':
+        print('{}')
+        print('{\}')
+        if r.text == '{\}':
             print(r.text)
             print('{}')
             print("No result")
