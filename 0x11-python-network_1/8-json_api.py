@@ -22,15 +22,17 @@ if __name__ == "__main__":
         
         # print('{}')
         # print('{\}')
-        print(r.content)
-        if r.status_code == 204 or not r.text:
-            # print(r.text)
-            # print('{}')
-            print("No result")
+        # print(r.content)
+        # if r.status_code == 204 or not r.text:
+        #     # print(r.text)
+        #     # print('{}')
+        #     print("No result")
         
         # if (r.status_code == 204):
         #     print("No result")
+        print(r.text)
         r.json()
+        print(r.text)
         
         
     except requests.exceptions.JSONDecodeError:
