@@ -7,10 +7,10 @@ import sys
 
 
 if __name__ == "__main__":
-    """ MAIN METHOD """
+
     url = sys.argv[1]
     try:
         r = requests.get(url)
         print(r.headers.get("X-Request-Id"))
-    except:
+    except Exception :
         pass
