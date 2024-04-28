@@ -22,7 +22,7 @@ if __name__ == "__main__":
         
         # print('{}')
         # print('{\}')
-        # print(r.text)
+        print(r.text.strip())
         if r.status_code == 204 or not r.text:
             # print(r.text)
             # print('{}')
