@@ -26,6 +26,6 @@ if __name__ == "__main__":
 
         # for item in response:
         sha = response[i].get("sha")
-        name = response[i]["commit"]["author"]["name"]
+        name = response[i]["commit"]["committer"]["name"]
 
         print(f"{sha}: {name}")
