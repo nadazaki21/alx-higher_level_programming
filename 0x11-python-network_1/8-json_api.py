@@ -30,6 +30,7 @@ if __name__ == "__main__":
         
         # if (r.status_code == 204):
         #     print("No result")
+        print(empty_dic)
         print(r.text)
         r.json()
         print(r.text)
