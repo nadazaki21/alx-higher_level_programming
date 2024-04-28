@@ -20,7 +20,8 @@ if __name__ == "__main__":
         
         print('{}')
         print('{\}')
-        if r.text == '{\}':
+        print(r.text)
+        if r.text == '{}':
             print(r.text)
             print('{}')
             print("No result")
