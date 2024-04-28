@@ -17,7 +17,7 @@ if __name__ == "__main__":
         r = requests.post("http://0.0.0.0:5000/search_user", params=payload)
         print(r.status_code)
         print(r.text)
-        if (r == '{}\n'):
+        if (r == '{\}'):
             print("No result")
         # if (r.status_code == 204):
         #     print("No result")
