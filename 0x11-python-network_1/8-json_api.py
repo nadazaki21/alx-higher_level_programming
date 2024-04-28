@@ -18,12 +18,13 @@ if __name__ == "__main__":
         # print(r.status_code)
         # print(r.text)
         
-        # if (r == '{\}'):
-        #     print("No result")
+        if (r == '{\}'):
+            print("No result")
         
         # if (r.status_code == 204):
         #     print("No result")
         r.json()
+        
     except requests.exceptions.JSONDecodeError:
         print("Not a valid JSON")
     except Exception:
