@@ -15,17 +15,16 @@ if __name__ == "__main__":
 
     try:
         r = requests.post("http://0.0.0.0:5000/search_user", data=payload)
-        print(r.status_code)
-        print(r.text)
-        if (r == '{\}'):
-            print("No result")
+        # print(r.status_code)
+        # print(r.text)
+        
+        # if (r == '{\}'):
+        #     print("No result")
+        
         # if (r.status_code == 204):
         #     print("No result")
         r.json()
-        
-            
-            
     except requests.exceptions.JSONDecodeError:
         print("Not a valid JSON")
-    # except requests.exceptions.InvalidJSONError:
-        
+    except requests.exceptions.InvalidJSONError:
+        print("No result")
