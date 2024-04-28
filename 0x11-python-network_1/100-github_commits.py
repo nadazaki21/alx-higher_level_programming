@@ -14,16 +14,14 @@ if __name__ == "__main__":
         "accept": "application/vnd.github+json",
         "X-GitHub-Api-Version": "2022-11-28",
     }
-    # cred = requests.auth.HTTPBasicAuth(username, password)
 
-    
     try:
         r = requests.get(
-            f"https://api.github.com/repos/{owner_name}/{repository_name}/commits",
+            f"https://api.github.com/repos/{owner_name}/"
+            f"{repository_name}/commits",
             headers=head,
         )
         response = r.json()
-        
 
         for i in range(10):
 
@@ -32,5 +30,5 @@ if __name__ == "__main__":
             name = response[i]["commit"]["author"]["name"]
 
             print(f"{sha}: {name}")
-    except:
+    except Exception:
         pass
