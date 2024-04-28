@@ -12,6 +12,8 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         payload = {"q": sys.argv[1]}
     #print(payload)
+    
+    empty_dic = {}
 
     try:
         r = requests.post("http://0.0.0.0:5000/search_user", data=payload)
@@ -21,7 +23,7 @@ if __name__ == "__main__":
         print('{}')
         print('{\}')
         print(r.text)
-        if r.text is '{}':
+        if r.text == empty_dic:
             print(r.text)
             print('{}')
             print("No result")
