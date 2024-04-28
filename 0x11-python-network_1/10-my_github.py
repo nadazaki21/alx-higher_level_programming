@@ -12,5 +12,8 @@ if __name__ == "__main__":
     # head = {'accept': 'application/vnd.github+json', }
     cred = requests.auth.HTTPBasicAuth(username, password)
 
-    r = requests.get(f"https://api.github.com/users/{username}", auth=cred)
-    print(r.json().get("id"))
+    try:
+        r = requests.get(f"https://api.github.com/users/{username}", auth=cred)
+        print(r.json().get("id"))
+    except Exception:
+        pass
