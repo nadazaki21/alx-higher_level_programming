@@ -14,7 +14,7 @@ if __name__ == "__main__":
     #print(payload)
 
     try:
-        r = requests.post("http://0.0.0.0:5000/search_user", params=payload)
+        r = requests.post("http://0.0.0.0:5000/search_user", data=payload)
         print(r.status_code)
         print(r.text)
         if (r == '{\}'):
