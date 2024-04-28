@@ -17,10 +17,17 @@ if __name__ == "__main__":
         
         if r.json() == {}:
             print("No result")
+        
+        if r.json() == r'{}':
+            print("No result")
+
+        print("{{}}")
+        if r.json() == "{{}}":
+            print("No result")
+            
+            
 
         
         
     except requests.exceptions.JSONDecodeError:
         print("Not a valid JSON")
-    except Exception:
-        print("No result")
