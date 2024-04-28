@@ -23,7 +23,7 @@ if __name__ == "__main__":
         print('{}')
         print('{\}')
         print(r.text)
-        if r.text == empty_dic:
+        if r.text == str(empty_dic):
             print(r.text)
             print('{}')
             print("No result")
