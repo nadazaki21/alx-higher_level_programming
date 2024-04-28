@@ -18,11 +18,11 @@ if __name__ == "__main__":
         if r.json() == {}:
             print("No result")
         
-        if r.json() == r'{}':
+        if r.text() == r'{}':
             print("No result")
 
-        print("{{}}")
-        if r.json() == "{{}}":
+        print(f"{{}}")
+        if r.json() == f"{{}}":
             print("No result")
             
             
