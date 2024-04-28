@@ -11,29 +11,12 @@ if __name__ == "__main__":
     payload = {"q": ""}
     if len(sys.argv) > 1:
         payload = {"q": sys.argv[1]}
-    #print(payload)
-    
-    empty_dic = {}
 
     try:
         r = requests.post("http://0.0.0.0:5000/search_user", data=payload)
-        # print(r.status_code)
-        # print(r.text)
-        
-        # print('{}')
-        # print('{\}')
-        # print(r.content)
-        if r.json == {}:
-            # print(r.text)
-            # print('{}')
+        response = r.json()
+        if response == {}:
             print("No result")
-        
-        # if (r.status_code == 204):
-        #     print("No result")
-        print(empty_dic)
-        print(r.text)
-        r.json()
-        print(r.text)
         
         
     except requests.exceptions.JSONDecodeError:
