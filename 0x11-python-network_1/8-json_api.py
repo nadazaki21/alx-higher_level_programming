@@ -15,7 +15,7 @@ if __name__ == "__main__":
     try:
         r = requests.post("http://0.0.0.0:5000/search_user", params=payload)
         r.json()  # if json decoding fails , it raises an exception
-        if (r == {}):
+        if (r.status_code == 204):
             print("No result")
             
             
