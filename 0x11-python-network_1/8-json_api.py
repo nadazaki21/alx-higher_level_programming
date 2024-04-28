@@ -23,10 +23,10 @@ if __name__ == "__main__":
         # print('{}')
         # print('{\}')
         # print(r.content)
-        # if r.status_code == 204 or not r.text:
-        #     # print(r.text)
-        #     # print('{}')
-        #     print("No result")
+        if r.json == {}:
+            # print(r.text)
+            # print('{}')
+            print("No result")
         
         # if (r.status_code == 204):
         #     print("No result")
