@@ -16,16 +16,21 @@ if __name__ == "__main__":
     }
     # cred = requests.auth.HTTPBasicAuth(username, password)
 
-    r = requests.get(
-        f"https://api.github.com/repos/{owner_name}/{repository_name}/commits",
-        headers=head,
-    )
-    response = r.json()
+    
+    try:
+        r = requests.get(
+            f"https://api.github.com/repos/{owner_name}/{repository_name}/commits",
+            headers=head,
+        )
+        response = r.json()
+        
 
-    for i in range(10):
+        for i in range(10):
 
-        # for item in response:
-        sha = response[i].get("sha")
-        name = response[i]["commit"]["committer"]["name"]
+            # for item in response:
+            sha = response[i].get("sha")
+            name = response[i]["commit"]["author"]["name"]
 
-        print(f"{sha}: {name}")
+            print(f"{sha}: {name}")
+    except:
+        pass
