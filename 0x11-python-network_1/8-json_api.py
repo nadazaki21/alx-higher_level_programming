@@ -15,7 +15,7 @@ if __name__ == "__main__":
     try:
         r = requests.post("http://0.0.0.0:5000/search_user", data=payload)
         
-        if r.json == {}:
+        if r.json() == {}:
             print("No result")
 
         
