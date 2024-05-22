@@ -1,15 +1,15 @@
 #!/usr/bin/node
 const request = require('request');
-const films_api = "https://swapi-api.alx-tools.com/api/films/" + process.argv[2];
+const filmsAPI = 'https://swapi-api.alx-tools.com/api/films/' + process.argv[2];
 
-async function fetchCharacterNames() {
+async function fetchCharacterNames () {
   try {
-    const response = await requestPromise(films_api);
+    const response = await requestPromise(filmsAPI);
     const data = JSON.parse(response.body);
-    const characters_urls = data.characters;
+    const charURLs = data.characters;
 
     const names = await Promise.all(
-      characters_urls.map(async (url) => {
+      charURLs.map(async (url) => {
         const characterResponse = await requestPromise(url);
         const characterData = JSON.parse(characterResponse.body);
         return characterData.name;
@@ -19,7 +19,6 @@ async function fetchCharacterNames() {
     for (const name of names) {
       console.log(name);
     }
-
   } catch (error) {
     console.error(error);
   }
@@ -27,7 +26,7 @@ async function fetchCharacterNames() {
 
 fetchCharacterNames();
 
-function requestPromise(url) {
+function requestPromise (url) {
   return new Promise((resolve, reject) => {
     request(url, (err, res) => {
       if (err) {
